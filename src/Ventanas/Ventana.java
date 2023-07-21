@@ -78,6 +78,7 @@ public class Ventana extends JFrame {
         moneda.setIcon(new ImageIcon(img.getScaledInstance(moneda.getWidth(), moneda.getHeight(), Image.SCALE_SMOOTH)));
         this.setLocationRelativeTo(null);
         panel.add(moneda);
+        this.dispose();
 
         ActionListener oyente;
         oyente = new ActionListener() {
@@ -99,6 +100,7 @@ public class Ventana extends JFrame {
         datos.setIcon(new ImageIcon(img1.getScaledInstance(datos.getWidth(), datos.getHeight(), Image.SCALE_SMOOTH)));
         this.setLocationRelativeTo(null);
         panel.add(datos);
+        this.dispose();
         
         ActionListener oyente1;
         oyente1 = new ActionListener() {
@@ -120,14 +122,14 @@ public class Ventana extends JFrame {
         temperatura.setIcon(new ImageIcon(img2.getScaledInstance(temperatura.getWidth(), temperatura.getHeight(), Image.SCALE_SMOOTH)));
         this.setLocationRelativeTo(null);
         panel.add(temperatura);
+        
 
         ActionListener oyente2;
         oyente2 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 Temperatura newFrame = new Temperatura();
-                newFrame.setVisible(true);
-                //this.dispose();
+                newFrame.setVisible(true);                
             }
         };
         temperatura.addActionListener(oyente2);

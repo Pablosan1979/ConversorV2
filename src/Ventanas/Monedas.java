@@ -49,30 +49,30 @@ public class Monedas extends JFrame {
         monedas.setFont(new Font("Anton", Font.PLAIN, 12));
         monedas.setHorizontalAlignment(SwingConstants.CENTER); //se puede usar este 
         panel.add(monedas);
-        
+
         JLabel lblMoneda = new JLabel("Introduzca el valor a convertir");
-        lblMoneda.setBounds(10,50,200,30);
+        lblMoneda.setBounds(10, 50, 200, 30);
         lblMoneda.setFont(new Font("Anton", Font.PLAIN, 12));
         panel.add(lblMoneda);
-        
+
         JTextField txtMoneda = new JTextField();
-        txtMoneda.setBounds(220,50, 200, 30);
+        txtMoneda.setBounds(220, 50, 200, 30);
         txtMoneda.setOpaque(false);
         txtMoneda.setFont(new Font("Anton", Font.PLAIN, 12));
         panel.add(txtMoneda);
-        
+
         JLabel lblMoneda1 = new JLabel("Valor resultante de la conversion: ");
-        lblMoneda1.setBounds(10,160,200,30);
+        lblMoneda1.setBounds(10, 160, 200, 30);
         lblMoneda1.setFont(new Font("Anton", Font.PLAIN, 12));
         panel.add(lblMoneda1);
-        
+
         JTextField txtMoneda1 = new JTextField();
-        txtMoneda1.setBounds(220,160, 200, 30);
+        txtMoneda1.setBounds(220, 160, 200, 30);
         txtMoneda1.setFont(new Font("Anton", Font.PLAIN, 12));
         txtMoneda1.setOpaque(true);
         txtMoneda1.setEditable(false);
         panel.add(txtMoneda1);
-        
+
         JLabel a = new JLabel("A", SwingConstants.CENTER);
         a.setBounds(100, 100, 150, 30);
         a.setFont(new Font("Anton", Font.PLAIN, 12));
@@ -91,7 +91,7 @@ public class Monedas extends JFrame {
         retorno.setIcon(new ImageIcon(img.getScaledInstance(retorno.getWidth(), retorno.getHeight(), Image.SCALE_SMOOTH)));
         this.setLocationRelativeTo(null);
         panel.add(retorno);
-        
+
         ActionListener oyente;
         oyente = new ActionListener() {
             @Override
@@ -100,8 +100,8 @@ public class Monedas extends JFrame {
                 newFrame.setVisible(true);
             }
         };
-        retorno.addActionListener(oyente );
-        
+        retorno.addActionListener(oyente);
+
         JButton salir = new JButton();
         salir.setBounds(5, 355, 40, 40);
         salir.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -111,7 +111,7 @@ public class Monedas extends JFrame {
         salir.setIcon(new ImageIcon(img3.getScaledInstance(salir.getWidth(), salir.getHeight(), Image.SCALE_SMOOTH)));
         this.setLocationRelativeTo(null);
         panel.add(salir);
-        
+
         ActionListener oyente3;
         oyente3 = new ActionListener() {
             @Override
@@ -120,7 +120,7 @@ public class Monedas extends JFrame {
             }
         };
         salir.addActionListener(oyente3);
-        
+
         JButton igual = new JButton();
         igual.setBounds(450, 100, 40, 40);
         igual.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -130,35 +130,35 @@ public class Monedas extends JFrame {
         igual.setIcon(new ImageIcon(img4.getScaledInstance(igual.getWidth(), igual.getHeight(), Image.SCALE_SMOOTH)));
         this.setLocationRelativeTo(null);
         panel.add(igual);
-        
+
         ActionListener oyente4;
         oyente4 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                
+
             }
         };
-        igual.addActionListener(oyente4 );
+        igual.addActionListener(oyente4);
 
     }
-    
-    private void colocarListasDesplegables(){
-    
-    String[] listaMonedas = {"Dolares","Euros","Libras Esterlinas","Pesos COP","Won Surcoreano","Yen Japones"};
-    JComboBox monedas = new JComboBox(listaMonedas);
-    monedas.setFont(new Font("Anton", Font.PLAIN, 12));
-    monedas.setBounds(10, 100, 100, 40);
-    panel.add(monedas);
-    
-    JComboBox monedas1 = new JComboBox(listaMonedas);
-    monedas1.setSelectedIndex(1);
-    monedas1.setFont(new Font("Anton", Font.PLAIN, 12));
-    monedas1.setBounds(250, 100, 100, 40);
-    panel.add(monedas1);
+
+    private void colocarListasDesplegables() {
+
+        String[] listaMonedas = {"Dolares", "Euros", "Libras Esterlinas", "Pesos COP", "Won Surcoreano", "Yen Japones"};
+        JComboBox monedas = new JComboBox(listaMonedas);
+        monedas.setFont(new Font("Anton", Font.PLAIN, 12));
+        monedas.setBounds(10, 100, 100, 40);
+        panel.add(monedas);
+
+        JComboBox monedas1 = new JComboBox(listaMonedas);
+        monedas1.setSelectedIndex(1);
+        monedas1.setFont(new Font("Anton", Font.PLAIN, 12));
+        monedas1.setBounds(250, 100, 100, 40);
+        panel.add(monedas1);
     }
-    
+
     double convertirMonedas(double cantidad, String monedaOrigen, String monedaDestino) {
-        
+
         switch (monedaOrigen) {
             case "Dólares" -> {
                 switch (monedaDestino) {

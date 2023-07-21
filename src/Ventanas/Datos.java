@@ -101,7 +101,7 @@ public class Datos extends JFrame {
             }
         };
         retorno.addActionListener(oyente);
-        
+                
         JButton salir = new JButton();
         salir.setBounds(5, 355, 40, 40);
         salir.setCursor(new Cursor(Cursor.HAND_CURSOR));
